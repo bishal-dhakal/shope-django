@@ -5,6 +5,12 @@ name = "pypi"
 
 [packages]
 django = "*"
+django-phonenumber-field = "*"
+python-dotenv = "*"
+psycopg2 = "*"
+django-cors-headers = "*"
+djangorestframework = "*"
+djangorestframework-simplejwt = "*"
 
 [dev-packages]
 
