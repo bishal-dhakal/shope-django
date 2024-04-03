@@ -40,3 +40,9 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return self.username
 
+
+class Address:
+    """
+    TODO:user can add multiple address
+    """
+    pass
