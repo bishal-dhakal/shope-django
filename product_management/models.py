@@ -14,7 +14,7 @@ class Category(models.Model):
 class Products(models.Model):
     name = models.CharField(max_length=60,unique=True)
     images = models.ImageField(upload_to="product_images", default='product.jpg')
-    Category = models.ForeignKey(Category,on_delete=models.CASCADE,default=1)
+    category = models.ForeignKey(Category,on_delete=models.CASCADE,default=9)
     description = models.CharField(default='',blank=True,null=True,max_length=250)
     
     @staticmethod
@@ -31,3 +31,6 @@ class Products(models.Model):
             return Products.objects.filter(category=category_id)
         else:
             return Products.get_all_products()
+        
+    def __str__(self):
+        return self.name

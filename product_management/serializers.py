@@ -5,16 +5,17 @@ class ProductsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Products
         fields = '__all__'
+        depth = 1
 
 class UpdateProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model= Products
-        fields = ('name','images','Category','description')
+        fields = ('name','images','category','description')
         extra_kwargs={
             'name':{'required':False},
             'images':{'required':False},
-            'Category':{'required':False},
+            'category':{'required':False},
             'description':{'required':False},
         }
 
