@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'django.contrib.staticfiles',
     'rest_framework_simplejwt',
-    'user_management'
+    'user_management',
+    'product_management'
 ]
 
 AUTH_USER_MODEL = 'user_management.CustomUser'
