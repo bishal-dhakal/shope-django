@@ -45,11 +45,12 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'django.contrib.staticfiles',
     'rest_framework_simplejwt',
-    'user_management',
-    'product_management'
+    'user',
+    'product',
+    'order'
 ]
 
-AUTH_USER_MODEL = 'user_management.CustomUser'
+AUTH_USER_MODEL = 'user.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=60)),
                 ('images', models.ImageField(default='product.jpg', upload_to='product_images')),
                 ('description', models.CharField(blank=True, default='', max_length=250, null=True)),
-                ('Category', models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='product_management.category')),
+                ('Category', models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='product.category')),
             ],
         ),
     ]

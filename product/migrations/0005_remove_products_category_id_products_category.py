@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('product_management', '0004_rename_category_products_category_id'),
+        ('product', '0004_rename_category_products_category_id'),
     ]
 
     operations = [
@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='products',
             name='category',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='product_management.category'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='product.category'),
         ),
     ]
