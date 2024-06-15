@@ -45,9 +45,11 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'django.contrib.staticfiles',
     'rest_framework_simplejwt',
+    'debug_toolbar',
     'user',
     'product',
-    'order'
+    'order',
+    'cart'
 ]
 
 AUTH_USER_MODEL = 'user.CustomUser'
@@ -57,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -64,6 +67,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'core.urls'
 
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+CART_SESSION_ID = 'cart'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
